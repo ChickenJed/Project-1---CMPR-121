@@ -1,2 +1,28 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+#include <iostream>
+
+int evenOnly(int num)
+{
+	if (num <= 0)
+	{
+		std::cout << num;
+		return 0;
+	}
+		
+	int remainder;
+
+	remainder = num % 2;
+	if (remainder == 0 )
+		std::cout << num << ", ";
+	return evenOnly(num - 1);
+		
+}
+
+int main()
+{
+	int example = 23;
+	evenOnly(example);
+
+	return 0;
+}
